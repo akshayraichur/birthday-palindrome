@@ -178,6 +178,11 @@ function App() {
     const inputValue = document.querySelector('.date-input');
     const resultDiv = document.querySelector('.result');
 
+    if (!inputValue.value) {
+      resultDiv.innerText = 'Please add a proper date!';
+      return;
+    }
+
     let dateStr = inputValue.value;
     dateStr = dateStr.split('-');
     let date = {
